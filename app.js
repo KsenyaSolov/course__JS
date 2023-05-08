@@ -1,16 +1,9 @@
-const role = "admin";
-
-switch (role) {
-    case "manager":
-        console.log("Менеджер");
+const problem = prompt("Сколько будет 7 + 15?");
+switch (problem) {
+    case "22":
+    case "Я не робот":
+        console.log("Успех");
         break;
-    case "admin":
-        console.log("Администратор");
-        break;
-    case "worker":
-        console.log("Работник");
-        break;
-    default:
-        console.log("Доступ запрещен")
-        break;
+    default: 
+        console.log("Вы робот!");
 }

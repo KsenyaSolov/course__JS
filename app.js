@@ -1,27 +1,19 @@
-//Первое решение
-
-/*const salary = 80;
-const workTime = 5;
-const workDays = 11 - 11 / 7;
-console.log(40 <= workTime * workDays) 
-console.log(salary * 40)
+/*
+Вася положил 12 000 на вклад 7% годовых с капитализацией 1 раз в месяц. Вывести в консоль, сможет ли он купить дом за 13 500 через 2 года после снятия вклада. И остаток после покупки.
+Итог = Сумма * (1 + Ставка в месяц не в %) ** срок в месяцах
 */
 
-
-//Второе решение
-
-/*const salary = 80;
-const workTime = 5 * 5;
-const timeHours = 40;
-console.log(11 / 7 * 40 >= timeHours / workTime)
-console.log(timeHours * salary)
-*/
-
-
-//Решение после разбора
-
-const payRate = 80;
-const projectTime = 40;
-const freeTime = 5 * 9; 
-console.log("Могу ли взяться за работу? " + (projectTime <= freeTime));
-console.log("Работа будет стоить: " + (payRate * projectTime) + "$")
+const deposit = 12000;
+const time = 24;
+const rate = 0.07;
+const goal = 13500;
+let remains;
+const result = deposit * (1 + rate / 12) ** time;
+if (result >= goal) {
+    console.log(`Вы накопили: ${result}.
+Денег на квартиру хватает.
+Осталось: ${result - 13500}`)
+} else {
+    console.log(`Вы накопили: ${result}.
+Денег на квартиру не хватает`)
+}
